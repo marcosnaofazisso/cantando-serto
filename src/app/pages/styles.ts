@@ -4,5 +4,6 @@ export const LightTheme = {
     third: "#E3E8D1",
     forth: "#D6E2CC",
     fifth: "#CADDC7",
+    sixth: "#7F8180",
 
 }
