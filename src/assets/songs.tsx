@@ -35,9 +35,6 @@ import crazy from '../../public/resources/Seal_-_Crazy.mp3'
 import getUpAndBoogie from '../../public/resources/Silver_Convention_-_Get_Up_and_Boogie.mp3'
 import linger from '../../public/resources/The_Cranberries_-_Linger.mp3'
 import sugarBabyLove from '../../public/resources/The_Rubettes_-_Sugar_Baby_Love.mp3'
-
-// import name from '../../public/resources/'
-// import name from '../../public/resources/'
 // import name from '../../public/resources/'
 
 
