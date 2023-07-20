@@ -12,8 +12,28 @@ export const LightTheme = {
 export const TitleBox = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 750px) {
+            margin: 2vh 0 5vh 0;
+        }
+
+`
+export const SongsBox = styled.div`
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
 `
 
+export const SRoot = styled.div`
+    background-color: ${LightTheme.first};
+`
+
+export const SMain = styled.div`
+    width: 100vw;
+    background-color: ${LightTheme.first};
+    display: 'flex';
+    flex-direction: 'column';
+`
 export const STitle = styled.div`
     color: ${LightTheme.second};
     padding: 5vw 5vw 0 5vw;
@@ -21,12 +41,19 @@ export const STitle = styled.div`
     .mainTitle {
         font-size: 6em;
         font-weight: 700;
+        
+        @media (max-width: 750px) {
+            font-size: 2em;
+            font-weight: 700;
+            padding: 2vw 2vw 0 1vw;
+        }
     }
 
     .mainTitleDetail {
         display: inline;
         font-weight: 900;
         color: ${LightTheme.seventh}
+        
     }
 `
 
@@ -36,6 +63,11 @@ export const SSubTitle = styled.div`
     .mainSubTitle { 
         font-size: 1.5rem;
         padding: 0 5vw 5vw 30vw;
+        
+        @media (max-width: 750px) {
+            font-size: .8rem;
+            padding: 0 1vw 1vw 12vw;
+        }
 
     }
     .mainSubTitleDetail {
@@ -43,4 +75,21 @@ export const SSubTitle = styled.div`
         color: ${LightTheme.seventh};
         filter: drop-shadow(0 0 0.75rem white);
     }
+`
+
+export const StyledSongBox = styled.div`
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    background-color: ${LightTheme.third}; 
+    padding: 1.5rem; 
+    border-radius: 10px; 
+    margin: 2vh auto 2vh auto; 
+    width: 25vw;
+    
+    @media (max-width: 750px) {
+        width: 90vw;
+        padding: .5rem; 
+        margin: 1vh auto 1vh auto; 
+        }
 `

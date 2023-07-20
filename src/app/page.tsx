@@ -3,19 +3,21 @@
 import { songs } from "@/assets/songs";
 import { Typography } from "@mui/material";
 import { RefObject, createRef } from "react";
-import { LightTheme, TitleBox } from "./pages/styles";
+import { LightTheme, SongsBox, TitleBox } from "./pages/styles";
 import BasicLayout from "./layout/Basic";
 import Title from "./pages/components/Title";
 import SubTitle from "./pages/components/SubTitle";
+import Root from "./pages/components/Root";
+import Main from "./pages/components/Main";
+import SongBox from "./pages/components/SongBox";
 
 export default function Home() {
 
   const playerRefs: RefObject<HTMLAudioElement>[] = []
 
   return (
-    <BasicLayout>
-
-      <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: LightTheme.first }}>
+    <Root>
+      <Main>
 
         <TitleBox>
           <Title />
@@ -23,7 +25,7 @@ export default function Home() {
         </TitleBox>
 
 
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+        <SongsBox>
           {songs.map((song: any, index: number) => {
 
             const playerRef = createRef<HTMLAudioElement>();
@@ -31,7 +33,7 @@ export default function Home() {
             playerRefs[index] = playerRef
 
             return (
-              <div key={id} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: LightTheme.third, padding: '1.5rem', borderRadius: "10px", margin: '2vh auto 2vh auto', width: '25vw' }}>
+              <SongBox key={id}>
                 <Typography variant="h5" style={{ padding: '.2rem' }}>
                   {song.trackMessage}
                 </Typography>
@@ -39,14 +41,11 @@ export default function Home() {
                 <audio controls ref={playerRef} style={{ padding: '.2rem', width: '20vw' }}>
                   <source src={song.src} type="audio/mpeg" />
                 </audio>
-              </div>
+              </SongBox>
             )
           })}
-        </div>
-      </div>
-    </BasicLayout>
-
-
-
+        </SongsBox>
+      </Main>
+    </Root>
   )
 }
