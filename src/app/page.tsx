@@ -1,21 +1,24 @@
 'use client'
 
 import { songs } from "@/assets/songs";
-import { Typography } from "@mui/material";
 import { RefObject, createRef } from "react";
-import { LightTheme, TitleBox } from "./pages/styles";
-import BasicLayout from "./layout/Basic";
-import Title from "./pages/components/Title";
+import AudioComponent from "./pages/components/Audio";
+import Main from "./pages/components/Main";
+import Root from "./pages/components/Root";
+import SongBox from "./pages/components/SongBox";
+import SongName from "./pages/components/SongName";
+import SongTitle from "./pages/components/SongTitle";
 import SubTitle from "./pages/components/SubTitle";
+import Title from "./pages/components/Title";
+import { SongsBox, TitleBox } from "./pages/styles";
 
 export default function Home() {
 
   const playerRefs: RefObject<HTMLAudioElement>[] = []
 
   return (
-    <BasicLayout>
-
-      <div style={{ display: 'flex', flexDirection: 'column', backgroundColor: LightTheme.first }}>
+    <Root>
+      <Main>
 
         <TitleBox>
           <Title />
@@ -23,7 +26,7 @@ export default function Home() {
         </TitleBox>
 
 
-        <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap' }}>
+        <SongsBox>
           {songs.map((song: any, index: number) => {
 
             const playerRef = createRef<HTMLAudioElement>();
@@ -31,22 +34,15 @@ export default function Home() {
             playerRefs[index] = playerRef
 
             return (
-              <div key={id} style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', backgroundColor: LightTheme.third, padding: '1.5rem', borderRadius: "10px", margin: '2vh auto 2vh auto', width: '25vw' }}>
-                <Typography variant="h5" style={{ padding: '.2rem' }}>
-                  {song.trackMessage}
-                </Typography>
-                <Typography style={{ color: LightTheme.sixth, margin: '1.2vh' }}>({`${song.name} - ${song.artist}`})</Typography>
-                <audio controls ref={playerRef} style={{ padding: '.2rem', width: '20vw' }}>
-                  <source src={song.src} type="audio/mpeg" />
-                </audio>
-              </div>
+              <SongBox key={id}>
+                <SongTitle>{song.trackMessage}</SongTitle>
+                <SongName>({`${song.name} - ${song.artist}`})</SongName>
+                <AudioComponent ref={playerRef} song={song} />
+              </SongBox>
             )
           })}
-        </div>
-      </div>
-    </BasicLayout>
-
-
-
+        </SongsBox>
+      </Main>
+    </Root>
   )
 }
