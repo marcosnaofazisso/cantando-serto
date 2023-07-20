@@ -43,9 +43,9 @@ export const STitle = styled.div`
         font-weight: 700;
         
         @media (max-width: 750px) {
-            font-size: 2em;
+            font-size: 2.3em;
             font-weight: 700;
-            padding: 2vw 2vw 0 1vw;
+            padding: .5vw 0 0 1vw;
         }
     }
 
@@ -92,4 +92,34 @@ export const StyledSongBox = styled.div`
         padding: .5rem; 
         margin: 1vh auto 1vh auto; 
         }
+`
+export const StyledSongTitle = styled.div`
+
+    .mainSongTitle {
+        padding: .2rem;
+
+        @media (max-width: 750px) {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+    }
+    
+    `
+export const StyledSongSubTitle = styled.div`
+    color: ${LightTheme.sixth}; 
+    margin: 1vw;
+    
+    .mainSongSubTitle {
+            font-size: .8rem;
+        }
+
+`
+
+export const StyledAudioBox = styled.div`
+    padding: .2rem;
+
+    .audioControl {
+        max-width: 82vw;
+
+    }
 `

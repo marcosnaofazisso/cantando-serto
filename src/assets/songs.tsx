@@ -1,3 +1,4 @@
+import { Song } from '@/app/pages/types/song.interface'
 import shouldHaveKnowBetter from '../../public/resources/Jim_Diamond_-_I_Should_Have_Known_Better.mp3'
 import eyesWithoutAFace from '../../public/resources/Billy_Idol_-_Eyes Without_A_Face.mp3'
 import abba from '../../public/resources/ABBA_-_The_Winner Takes_It_All.mp3'
@@ -38,7 +39,7 @@ import sugarBabyLove from '../../public/resources/The_Rubettes_-_Sugar_Baby_Love
 // import name from '../../public/resources/'
 
 
-export const songs: any = [
+export const songs: Song[] = [
     {
         id: 1,
         name: "Should Have Known Better",
