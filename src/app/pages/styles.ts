@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { OptionProps } from "./types/styles.interface"
 
 export const LightTheme = {
     first: "#EB8D24",
@@ -8,6 +9,7 @@ export const LightTheme = {
     fifth: "#CADDC7",
     sixth: "#7F8180",
     seventh: "#959696",
+    eighth: "#c48038",
 }
 export const TitleBox = styled.div`
     display: flex;
@@ -23,17 +25,61 @@ export const SongsBox = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
 `
+export const StyledHeader = styled.div`
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    background-color: ${LightTheme.first};
+`
+
+export const StyledOption = styled.div<OptionProps>`
+
+    .menuOption { 
+        display: block;
+        font-size: 1.5rem;
+        text-align: center;
+        width: 20vw;
+        height: 100%;
+        padding: 1rem;
+        margin-left: 2rem;
+        font-weight: bold;
+        color: ${(props) => (props.selected ? LightTheme.forth : LightTheme.first)};
+        border: solid 3px ${(props) => props.selected ? LightTheme.fifth : LightTheme.fifth};
+        border-bottom: 0;
+        border-radius: 10px 10px 0 0;
+        cursor: pointer;
+        box-shadow: ${(props) => (props.selected ? null : `inset 0 -10px 10px -10px #7F8180`)};
+        background-color: ${(props) => (props.selected ? LightTheme.first : LightTheme.fifth)};
+        
+        @media (max-width: 750px) {
+            font-size: .8em;
+            width: 100%;
+            padding: .8rem;
+            margin: 0 0 0 .5rem;
+        }
+    }
+    `
 
 export const SRoot = styled.div`
     background-color: ${LightTheme.first};
-`
+    `
 
 export const SMain = styled.div`
     width: 100vw;
     background-color: ${LightTheme.first};
     display: 'flex';
     flex-direction: 'column';
+    `
+export const StyledSection = styled.div`
+    width: 100vw;
+    background-color: ${LightTheme.first};
+    
+    @media (max-width: 750px) {
+        padding: .8rem;
+    }
 `
+
+
 export const STitle = styled.div`
     color: ${LightTheme.second};
     padding: 5vw 5vw 0 5vw;
