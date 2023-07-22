@@ -1,21 +1,21 @@
 'use client'
 
 import { songs } from "@/assets/songs";
-import { Children, Dispatch, RefObject, SetStateAction, createRef, useState } from "react";
+import SearchIcon from '@mui/icons-material/Search';
+import { InputAdornment, TextField } from "@mui/material";
+import { RefObject, createRef } from "react";
 import AudioComponent from "./pages/components/Audio";
+import Header from "./pages/components/Header";
 import Main from "./pages/components/Main";
+import Option from "./pages/components/Option";
 import Root from "./pages/components/Root";
+import Section from "./pages/components/Section";
 import SongBox from "./pages/components/SongBox";
 import SongName from "./pages/components/SongName";
 import SongTitle from "./pages/components/SongTitle";
 import SubTitle from "./pages/components/SubTitle";
 import Title from "./pages/components/Title";
 import { SongsBox, TitleBox } from "./pages/styles";
-import Section from "./pages/components/Section";
-import Header from "./pages/components/Header";
-import Option from "./pages/components/Option";
-import { InputAdornment, TextField } from "@mui/material";
-import SearchIcon from '@mui/icons-material/Search';
 
 export default function Home() {
 
@@ -49,7 +49,7 @@ export default function Home() {
 
               return (
                 <SongBox key={id}>
-                  <SongTitle>{song.id} - "{song.trackMessage}"</SongTitle>
+                  <SongTitle>{song.id} - &quot;{song.trackMessage}&quot;</SongTitle>
                   <SongName>({`${song.name} - ${song.artist}`})</SongName>
                   <AudioComponent ref={playerRef} song={song} />
                 </SongBox>
