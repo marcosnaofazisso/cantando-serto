@@ -1,19 +1,29 @@
-import React, { useState } from 'react'
+import { PageInfos, pages } from '@/assets/navigation'
+import { Dispatch, SetStateAction, useState } from 'react'
 import { StyledHeader } from '../styles'
 import Option from './Option'
 
-export default function Header() {
+export default function Header({ changePage }: { changePage: Dispatch<SetStateAction<number>>; }) {
 
-    const [selectedOption, setSelectedOption] = useState<string>("Músicas")
+    const [selectedOption, setSelectedOption] = useState<string>(pages[0].name)
 
-    const handleSelectOption = (event: any) => {
-        setSelectedOption(event?.target?.innerText)
+    const handleSelectOption = (pageId: number) => {
+        setSelectedOption(pages[pageId].name)
+        changePage(pageId)
     }
 
     return (
         <StyledHeader >
-            <Option selectedOption={selectedOption} changeOption={(e: any) => handleSelectOption(e)}>Músicas</Option>
-            <Option selectedOption={selectedOption} changeOption={(e: any) => handleSelectOption(e)}>Envie uma sugestão</Option>
+            {Object.values(pages).map((page: PageInfos, index: number) => {
+
+                return (
+                    <Option selectedOption={selectedOption}
+                        changeOption={(e: any) => handleSelectOption(page.id)}
+                        icon={page.icon}
+                        name={page.name} />
+                )
+
+            })}
         </StyledHeader>
     )
 }

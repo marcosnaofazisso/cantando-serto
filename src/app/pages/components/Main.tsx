@@ -1,10 +1,10 @@
 import React from 'react'
-import { SMain } from '../styles'
+import { StyledMain } from '../styles'
 
 export default function Main({ children }: { children: any }) {
     return (
-        <SMain>
+        <StyledMain>
             {children}
-        </SMain>
+        </StyledMain>
     )
 }

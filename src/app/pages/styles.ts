@@ -11,11 +11,12 @@ export const LightTheme = {
     seventh: "#959696",
     eighth: "#c48038",
 }
-export const TitleBox = styled.div`
+export const StyledTitleBox = styled.div`
     display: flex;
     flex-direction: column;
+    margin: 0;
 
-    @media (max-width: 750px) {
+    @media (max-width: 400px) {
             margin: 2vh 0 5vh 0;
         }
 
@@ -28,20 +29,26 @@ export const SongsBox = styled.div`
 export const StyledHeader = styled.div`
     display: flex;
     flex-direction: row;
-    width: 100vw;
     background-color: ${LightTheme.first};
+    
+    @media (max-width: 3000px) {
+        width: 100%;
+        }
+    @media (max-width: 800px) {
+        width: 90vw;
+        }
+    @media (max-width: 400px) {
+        width: 100%;
+        }
 `
 
 export const StyledOption = styled.div<OptionProps>`
 
     .menuOption { 
         display: block;
-        font-size: 1.5rem;
         text-align: center;
-        width: 20vw;
+        width: 100%;
         height: 100%;
-        padding: 1rem;
-        margin-left: 2rem;
         font-weight: bold;
         color: ${(props) => (props.selected ? LightTheme.forth : LightTheme.first)};
         border: solid 3px ${(props) => props.selected ? LightTheme.fifth : LightTheme.fifth};
@@ -51,46 +58,89 @@ export const StyledOption = styled.div<OptionProps>`
         box-shadow: ${(props) => (props.selected ? null : `inset 0 -10px 10px -10px #7F8180`)};
         background-color: ${(props) => (props.selected ? LightTheme.first : LightTheme.fifth)};
         
-        @media (max-width: 750px) {
-            font-size: .8em;
-            width: 100%;
+        @media (max-width: 3000px) {
+            font-size: 2rem;
+            padding: 1.2rem;
+            margin-left: 2.5rem;
+        }
+        @media (max-width: 1200px) {
+            font-size: 2.2em;
+            padding: 2rem;
+            margin-left: 1.6rem;
+        }
+        @media (max-width: 800px) {
+            font-size: 1.2em;
             padding: .8rem;
-            margin: 0 0 0 .5rem;
+            margin-left: .8rem;
+        }
+        @media (max-width: 400px) {
+            font-size: .8em;
+            padding: .8rem;
+            margin-left: .5rem;
         }
     }
     `
 
-export const SRoot = styled.div`
+export const StyledRoot = styled.div`
     background-color: ${LightTheme.first};
     `
 
-export const SMain = styled.div`
+export const StyledMain = styled.div`
     width: 100vw;
     background-color: ${LightTheme.first};
     display: 'flex';
     flex-direction: 'column';
     `
 export const StyledSection = styled.div`
-    width: 100vw;
     background-color: ${LightTheme.first};
     
-    @media (max-width: 750px) {
+    @media (max-width: 3000px) {
+        padding: 2.5rem;
+    }
+    @media (max-width: 800px) {
+        padding: 1rem;
+    }
+    @media (max-width: 400px) {
         padding: .8rem;
+    }
+
+    .searchField {
+        max-width: 90vw;
     }
 `
 
 
-export const STitle = styled.div`
+export const StyledTitle = styled.div`
     color: ${LightTheme.second};
-    padding: 5vw 5vw 0 5vw;
+
+    @media (max-width: 3000px) {
+            padding: .5vh 2vw;
+        }
+    @media (max-width: 1200px) {
+            padding: .5vh 2vw;
+        }
+    @media (max-width: 800px) {
+            padding: 1vw 2vw 0 2vw;
+        }
     
     .mainTitle {
-        font-size: 6em;
+        font-size: 10em;
         font-weight: 700;
         
-        @media (max-width: 750px) {
+        @media (max-width: 3000px) {
+            font-size: 7em;
+            padding: 0 2vw 0 2vw;
+        }
+        @media (max-width: 1200px) {
+            font-size: 6.5em;
+            padding: 0 2vw 0 2vw;
+        }
+        @media (max-width: 800px) {
+            font-size: 4em;
+            padding: 0 2vw 0 2vw;
+        }
+        @media (max-width: 400px) {
             font-size: 2.3em;
-            font-weight: 700;
             padding: .5vw 0 0 1vw;
         }
     }
@@ -98,19 +148,29 @@ export const STitle = styled.div`
     .mainTitleDetail {
         display: inline;
         font-weight: 900;
-        color: ${LightTheme.seventh}
+        color: ${LightTheme.fifth}
         
     }
 `
 
-export const SSubTitle = styled.div`
+export const StyledSubTitle = styled.div`
     color: ${LightTheme.second};
     
     .mainSubTitle { 
-        font-size: 1.5rem;
-        padding: 0 5vw 5vw 30vw;
         
-        @media (max-width: 750px) {
+        @media (max-width: 3000px) {
+            font-size: 2rem;
+            padding: 0 2vw 4vw 18vw;
+        }
+        @media (max-width: 1200px) {
+            font-size: 2.2rem;
+            padding: 0 2vw 8vw 22vw;
+        }
+        @media (max-width: 800px) {
+            font-size: 1.2rem;
+            padding: 0 2vw 5vw 22vw;
+        }
+        @media (max-width: 400px) {
             font-size: .8rem;
             padding: 0 1vw 1vw 12vw;
         }
@@ -118,8 +178,8 @@ export const SSubTitle = styled.div`
     }
     .mainSubTitleDetail {
         display: inline;
-        color: ${LightTheme.seventh};
-        filter: drop-shadow(0 0 0.75rem white);
+        color: ${LightTheme.fifth};
+        filter: drop-shadow(0 0 0.75rem black);
     }
 `
 
@@ -128,12 +188,24 @@ export const StyledSongBox = styled.div`
     flex-direction: column; 
     justify-content: space-between;
     background-color: ${LightTheme.third}; 
-    padding: 1.5rem; 
     border-radius: 10px; 
-    margin: 2vh auto 2vh auto; 
-    width: 25vw;
     
-    @media (max-width: 750px) {
+    @media (max-width: 3000px) {
+        width: 28vw;
+        padding: 2vw; 
+        margin: 1vh .5vw 1vh .5vw; 
+        }
+    @media (max-width: 1200px) {
+        width: 45vw;
+        padding: 1.2rem; 
+        margin: 1vh auto 1vh auto; 
+        }
+    @media (max-width: 800px) {
+        width: 90vw;
+        padding: 1.2rem; 
+        margin: 1vh auto 1vh auto; 
+        }
+    @media (max-width: 400px) {
         width: 90vw;
         padding: .5rem; 
         margin: 1vh auto 1vh auto; 
@@ -143,29 +215,63 @@ export const StyledSongTitle = styled.div`
 
     .mainSongTitle {
         padding: .2rem;
+        font-weight: bold;
 
-        @media (max-width: 750px) {
+        @media (max-width: 3000px) {
+            font-size: 2.5rem;
+        }
+        @media (max-width: 1200px) {
+            font-size: 2.4rem;
+        }
+        @media (max-width: 800px) {
+            font-size: 1.8rem;
+        }
+        @media (max-width: 400px) {
             font-size: 1.2rem;
-            font-weight: bold;
         }
     }
     
     `
 export const StyledSongSubTitle = styled.div`
     color: ${LightTheme.sixth}; 
-    margin: 1vw;
     
     .mainSongSubTitle {
+        
+        @media (max-width: 3000px) {
+            font-size: 1.5rem;
+            }
+            @media (max-width: 1200px) {
+            font-size: 1.6rem;
+            }
+            @media (max-width: 800px) {
+            font-size: 1.2rem;
+            }
+            @media (max-width: 400px) {
             font-size: .8rem;
+            }
         }
 
 `
 
 export const StyledAudioBox = styled.div`
-    padding: .2rem;
-
+    
     .audioControl {
-        max-width: 82vw;
+        
+        @media (max-width: 3000px) {
+            width: 100%;
+        }
+        @media (max-width: 1200px) {
+            width: 100%;
+            padding: 0;
+        }
+        @media (max-width: 800px) {
+            width: 83vw;
+            padding: .1rem;
+        }
+        @media (max-width: 400px) {
+            max-width: 82vw;
+            padding: .2rem;
+        }
 
     }
 `

@@ -1,10 +1,10 @@
 import { Box, Typography } from '@mui/material'
-import { STitle } from '../styles'
+import { StyledTitle } from '../styles'
 
 export default function Title() {
     return (
-        <STitle>
-            <Typography component='div' className='mainTitle'>Cantando <Box className='mainTitleDetail'>S</Box>erto</Typography>
-        </STitle>
+        <StyledTitle>
+            <Typography className='mainTitle'>Cantando <Box component="span" className='mainTitleDetail'>S</Box>erto</Typography>
+        </StyledTitle>
     )
 }
