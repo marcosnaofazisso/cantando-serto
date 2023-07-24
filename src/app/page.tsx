@@ -30,10 +30,8 @@ export default function Home() {
           <SubTitle />
         </TitleBox>
 
-        <Header>
-          <Option >Músicas</Option>
-          <Option>Envie uma sugestão</Option>
-        </Header>
+        <Header />
+
 
         <Section>
           <TextField id="outlined-basic" variant="outlined"
