@@ -4,7 +4,7 @@ import { pages } from "@/assets/navigation";
 import { songs } from "@/assets/songs";
 import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment, TextField, Typography } from "@mui/material";
-import { RefObject, createRef, useState } from "react";
+import { RefObject, createRef, useRef, useState } from "react";
 import AudioComponent from "./pages/components/Audio";
 import Header from "./pages/components/Header";
 import Main from "./pages/components/Main";
