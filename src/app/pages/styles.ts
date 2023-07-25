@@ -28,6 +28,7 @@ export const SongsBox = styled.div`
 `
 export const StyledHeader = styled.div`
     display: flex;
+    align-items: center;
     flex-direction: row;
     background-color: ${LightTheme.first};
     

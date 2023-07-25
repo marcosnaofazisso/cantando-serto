@@ -4,7 +4,7 @@ import { pages } from "@/assets/navigation";
 import { songs } from "@/assets/songs";
 import SearchIcon from '@mui/icons-material/Search';
 import { InputAdornment, TextField, Typography } from "@mui/material";
-import { RefObject, createRef, useRef, useState } from "react";
+import { RefObject, createRef, useState } from "react";
 import AudioComponent from "./pages/components/Audio";
 import Header from "./pages/components/Header";
 import Main from "./pages/components/Main";
@@ -15,13 +15,25 @@ import SongName from "./pages/components/SongName";
 import SongTitle from "./pages/components/SongTitle";
 import SubTitle from "./pages/components/SubTitle";
 import Title from "./pages/components/Title";
-import { SongsBox } from "./pages/styles";
 import TitleBox from "./pages/components/TitleBox";
+import { SongsBox } from "./pages/styles";
 
 export default function Home() {
 
   const [pageSelected, setPageSelected] = useState<number>(0)
+  const [filterValue, setFilterValue] = useState<string>("")
   const playerRefs: RefObject<HTMLAudioElement>[] = []
+
+  const handleSearchSong = (event: any) => {
+    setFilterValue(event?.target?.value)
+  }
+
+  const filteredSongs = songs.filter((song) => {
+    const songName = song.name.toLowerCase();
+    const trackName = song.trackMessage.toLowerCase();
+    const artistName = song.artist.toLowerCase();
+    return songName.includes(filterValue) || artistName.includes(filterValue) || trackName.includes(filterValue);
+  })
 
   return (
     <Root>
@@ -37,7 +49,10 @@ export default function Home() {
         <Section>
           {pageSelected === 0 && (
             <>
-              <TextField id="outlined-basic" variant="outlined" className="searchField"
+              <TextField
+                id="outlined-basic"
+                variant="outlined"
+                className="searchField"
                 sx={{ m: 0, borderRadius: '10px' }}
                 InputProps={{
                   startAdornment:
@@ -45,10 +60,11 @@ export default function Home() {
                       <SearchIcon />
                     </InputAdornment>,
                   style: { width: '90vw', height: '5vh', backgroundColor: 'white', marginBottom: '5vh' }
-                }} />
+                }}
+                onChange={(e: any) => handleSearchSong(e)} />
 
               <SongsBox>
-                {songs.map((song: any, index: number) => {
+                {filteredSongs.map((song: any, index: number) => {
 
                   const playerRef = createRef<HTMLAudioElement>();
                   const id = song.id

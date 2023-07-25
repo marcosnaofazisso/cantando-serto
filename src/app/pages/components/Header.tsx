@@ -14,10 +14,11 @@ export default function Header({ changePage }: { changePage: Dispatch<SetStateAc
 
     return (
         <StyledHeader >
-            {Object.values(pages).map((page: PageInfos, index: number) => {
-
+            {Object.values(pages).map((page: PageInfos) => {
                 return (
-                    <Option selectedOption={selectedOption}
+                    <Option
+                        key={page.id}
+                        selectedOption={selectedOption}
                         changeOption={(e: any) => handleSelectOption(page.id)}
                         icon={page.icon}
                         name={page.name} />
