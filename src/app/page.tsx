@@ -17,6 +17,8 @@ import SubTitle from "./pages/components/SubTitle";
 import Title from "./pages/components/Title";
 import TitleBox from "./pages/components/TitleBox";
 import { SongsBox } from "./pages/styles";
+import SuggestionForm from "./pages/components/SuggestionForm";
+import HeaderTitle from "./pages/components/HeaderTitle";
 
 export default function Home() {
 
@@ -47,6 +49,8 @@ export default function Home() {
         <Header changePage={setPageSelected} />
 
         <Section>
+          <HeaderTitle pageSelected={pageSelected} />
+
           {pageSelected === 0 && (
             <>
               <TextField
@@ -83,7 +87,7 @@ export default function Home() {
           )}
           {pageSelected === 1 && (
             <>
-              <Typography>{pages[pageSelected].name}</Typography>
+              <SuggestionForm />
             </>
           )}
         </Section>
