@@ -3,6 +3,10 @@
 import emailjs from '@emailjs/browser';
 import { Button, TextField } from '@mui/material';
 import { useRef, useState } from 'react';
+import { StyledFormBox, inputLabelPropsStyles, inputPropsStyles } from '../styles';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function SuggestionForm() {
 
@@ -12,7 +16,6 @@ export default function SuggestionForm() {
     const emailRef = useRef<HTMLInputElement>(null)
     const messageRef = useRef<HTMLInputElement>(null)
     const suggestionNameRef = useRef<HTMLInputElement>(null)
-    const suggestionTimeRef = useRef<HTMLInputElement>(null)
 
     const formatTime = (value: any) => {
         const onlyNumbers = value.replace(/[^\d]/g, '')
@@ -38,16 +41,23 @@ export default function SuggestionForm() {
             email: emailRef.current?.value,
         }
 
-        console.log("templateParams ==>>", templateParams)
-
-        emailjs.send(
-            process.env.NEXT_PUBLIC_SERVICE_ID!,
-            process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-            templateParams,
-            process.env.NEXT_PUBLIC_KEY)
-            .then((response) =>
+        toast.promise(
+            emailjs.send(
+                process.env.NEXT_PUBLIC_SERVICE_ID!,
+                process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+                templateParams,
+                process.env.NEXT_PUBLIC_KEY
+            ),
+            {
+                pending: 'Enviando e-mail...',
+                success: 'E-mail enviado com sucesso!',
+                error: 'Ocorreu um erro ao enviar o e-mail.',
+            }).then((response: any) => {
                 console.log(response)
-            ).catch((error) =>
+
+            }
+
+            ).catch((error: any) =>
                 console.log(error))
 
     }
@@ -55,52 +65,64 @@ export default function SuggestionForm() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-
-                <div style={{ display: 'flex', flexDirection: 'column' }}>
-
+                <StyledFormBox>
                     <TextField
                         label="Digite seu nome"
                         id="outlined-basic"
+                        className='formInput'
                         variant="outlined"
+                        InputProps={{ style: inputPropsStyles }}
                         placeholder="Nome"
+                        InputLabelProps={{ style: inputLabelPropsStyles }}
                         inputRef={nameRef}
-                        style={{ backgroundColor: 'white', borderRadius: '10px' }} />
+                    />
 
                     <TextField
                         label="Digite seu email*"
                         id="outlined-basic"
+                        className='formInput'
                         variant="outlined"
+                        InputLabelProps={{ style: inputLabelPropsStyles }}
                         placeholder="Email"
+                        InputProps={{ style: inputPropsStyles }}
                         inputRef={emailRef}
-                        style={{ backgroundColor: 'white', borderRadius: '10px' }} />
+                    />
 
                     <TextField
                         label="Digite a mensagem da música*"
                         id="outlined-basic"
+                        className='formInput'
                         variant="outlined"
                         inputRef={messageRef}
-                        placeholder="A-ha - Take on Me"
-                        style={{ backgroundColor: 'white', borderRadius: '10px' }} />
+                        InputProps={{ style: inputPropsStyles }}
+                        InputLabelProps={{ style: inputLabelPropsStyles }}
+                        placeholder="Tem pirão"
+                    />
 
                     <TextField
                         label="Digite o nome música sugerida*"
                         id="outlined-basic"
+                        className='formInput'
                         variant="outlined"
+                        InputProps={{ style: inputPropsStyles }}
                         placeholder="A-ha - Take on Me"
+                        InputLabelProps={{ style: inputLabelPropsStyles }}
                         inputRef={suggestionNameRef}
-                        style={{ backgroundColor: 'white', borderRadius: '10px' }} />
+                    />
 
                     <TextField
                         label="Tempo da música (opcional)"
                         variant="outlined"
                         value={suggestionTime}
+                        className='formInput'
                         onChange={(e) => handleTimeChange(e)}
-                        style={{ backgroundColor: 'white' }}
-                        inputProps={{ maxLength: 5, pattern: '^\\d{0,2}:\\d{0,2}$' }}
+                        inputProps={{ maxLength: 5, pattern: '^\\d{0,2}:\\d{0,2}$', style: inputPropsStyles }}
+                        InputLabelProps={{ shrink: true, style: inputLabelPropsStyles }}
                     />
-                    <Button variant="outlined" type="submit" style={{ color: 'orange', backgroundColor: 'white' }}>Enviar Sugestão</Button>
-                </div>
+                    <Button variant="outlined" className="formSubmit" type="submit">Enviar Sugestão</Button>
+                </StyledFormBox>
             </form>
+
         </div>
     )
 }

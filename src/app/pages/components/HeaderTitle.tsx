@@ -1,9 +1,11 @@
 import { pages } from '@/assets/navigation'
 import { Typography } from '@mui/material'
-import React from 'react'
+import { StyledHeaderTitle } from '../styles'
 
 export default function HeaderTitle({ pageSelected }: { pageSelected: number }) {
     return (
-        <Typography>{pages[pageSelected].name}</Typography>
+        <StyledHeaderTitle>
+            <Typography className='headerTitle'>{pages[pageSelected].name}</Typography>
+        </StyledHeaderTitle>
     )
 }

@@ -19,6 +19,8 @@ import TitleBox from "./pages/components/TitleBox";
 import { SongsBox } from "./pages/styles";
 import SuggestionForm from "./pages/components/SuggestionForm";
 import HeaderTitle from "./pages/components/HeaderTitle";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
 
@@ -40,6 +42,7 @@ export default function Home() {
   return (
     <Root>
       <Main>
+        <ToastContainer />
 
         <TitleBox>
           <Title />

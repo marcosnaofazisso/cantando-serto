@@ -42,6 +42,27 @@ export const StyledHeader = styled.div`
         width: 100%;
         }
 `
+export const StyledHeaderTitle = styled.div`
+    color: ${LightTheme.second};
+    
+    .headerTitle {
+        @media (max-width: 3000px) {
+            font-size: 5rem;
+            margin: 2rem;
+            margin-top: 0;
+        }
+        @media (max-width: 1200px) {
+            font-size: 4rem;
+            margin: 1.5rem;
+            margin-top: 0;
+        }
+        @media (max-width: 800px) {
+            font-size: 2.5rem;
+            margin: 1rem;
+            margin-top: 0;
+        }
+    }
+`
 
 export const StyledOption = styled.div<OptionProps>`
 
@@ -276,3 +297,56 @@ export const StyledAudioBox = styled.div`
 
     }
 `
+
+export const StyledFormBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    
+    .formInput {
+        max-width: 60vw;
+        margin: 1vh 1vw;
+        padding: 2vh 1vw;
+        font-size: 3rem;
+        background-color: ${LightTheme.second};
+        color: ${LightTheme.first};
+        border-radius: 10px;
+        border-color: red;
+
+        & .MuiOutlinedInput-root {
+            .MuiOutlinedInput-notchedOutline {
+            border-color: ${LightTheme.second};
+        }
+            &.Mui-focused .MuiOutlinedInput-notchedOutline {
+                border-color: ${LightTheme.second}; 
+        }
+  }
+
+        
+    }
+    
+    .formSubmit {
+        max-width: 50vw;
+        margin: 2.5vh 5vw;
+        padding: 3vh;
+        font-weight: bold;
+        color: black;
+        background-color: ${LightTheme.third};
+        border-color: ${LightTheme.sixth};
+        
+        &:hover {
+            background-color: ${LightTheme.fifth} ;
+
+        }
+    }
+`
+
+export const inputPropsStyles = {
+    fontSize: '2rem'
+}
+export const inputLabelPropsStyles = {
+    fontSize: '1.3rem',
+    marginLeft: '40px',
+    marginTop: '10px',
+    color: LightTheme.sixth,
+}
