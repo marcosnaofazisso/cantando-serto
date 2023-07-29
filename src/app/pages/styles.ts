@@ -44,22 +44,24 @@ export const StyledHeader = styled.div`
 `
 export const StyledHeaderTitle = styled.div`
     color: ${LightTheme.second};
+    margin-top: 0;
     
     .headerTitle {
         @media (max-width: 3000px) {
             font-size: 5rem;
             margin: 2rem;
-            margin-top: 0;
         }
         @media (max-width: 1200px) {
             font-size: 4rem;
             margin: 1.5rem;
-            margin-top: 0;
         }
         @media (max-width: 800px) {
             font-size: 2.5rem;
             margin: 1rem;
-            margin-top: 0;
+        }
+        @media (max-width: 450px) {
+            font-size: 1.8rem;
+            margin: .5rem;
         }
     }
 `
@@ -227,7 +229,7 @@ export const StyledSongBox = styled.div`
         padding: 1.2rem; 
         margin: 1vh auto 1vh auto; 
         }
-    @media (max-width: 400px) {
+    @media (max-width: 450px) {
         width: 90vw;
         padding: .5rem; 
         margin: 1vh auto 1vh auto; 
@@ -248,7 +250,7 @@ export const StyledSongTitle = styled.div`
         @media (max-width: 800px) {
             font-size: 1.8rem;
         }
-        @media (max-width: 400px) {
+        @media (max-width: 450px) {
             font-size: 1.2rem;
         }
     }
@@ -312,6 +314,22 @@ export const StyledFormBox = styled.div`
         color: ${LightTheme.first};
         border-radius: 10px;
         border-color: red;
+        
+        @media (max-width: 1200px) {
+            max-width: 90vw;
+            padding: 1vh 1vw;
+            margin: 1vh 1vw;
+        }
+        @media (max-width: 800px) {
+            max-width: 90vw;
+            padding: 1vh 1vw;
+            margin: 1vh 1vw;
+        }
+        @media (max-width: 450px) {
+            max-width: 90vw;
+            padding: 1vh 1vw;
+            margin: 1vh 1vw;
+        }
 
         & .MuiOutlinedInput-root {
             .MuiOutlinedInput-notchedOutline {
@@ -320,6 +338,7 @@ export const StyledFormBox = styled.div`
             &.Mui-focused .MuiOutlinedInput-notchedOutline {
                 border-color: ${LightTheme.second}; 
         }
+
   }
 
         
@@ -334,6 +353,12 @@ export const StyledFormBox = styled.div`
         background-color: ${LightTheme.third};
         border-color: ${LightTheme.sixth};
         
+        @media (max-width: 450px) {
+            max-width: 70vw;
+            padding: 1vh 10vw;
+            margin: 1vh auto;
+        }
+        
         &:hover {
             background-color: ${LightTheme.fifth} ;
 
@@ -345,7 +370,7 @@ export const inputPropsStyles = {
     fontSize: '2rem'
 }
 export const inputLabelPropsStyles = {
-    fontSize: '1.3rem',
+    fontSize: '1.2rem',
     marginLeft: '40px',
     marginTop: '10px',
     color: LightTheme.sixth,

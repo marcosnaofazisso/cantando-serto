@@ -1,12 +1,14 @@
 'use client'
 
-import { pages } from "@/assets/navigation";
 import { songs } from "@/assets/songs";
 import SearchIcon from '@mui/icons-material/Search';
-import { InputAdornment, TextField, Typography } from "@mui/material";
-import { RefObject, createRef, useRef, useState } from "react";
+import { InputAdornment, TextField } from "@mui/material";
+import { RefObject, createRef, useState } from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AudioComponent from "./pages/components/Audio";
 import Header from "./pages/components/Header";
+import HeaderTitle from "./pages/components/HeaderTitle";
 import Main from "./pages/components/Main";
 import Root from "./pages/components/Root";
 import Section from "./pages/components/Section";
@@ -14,13 +16,11 @@ import SongBox from "./pages/components/SongBox";
 import SongName from "./pages/components/SongName";
 import SongTitle from "./pages/components/SongTitle";
 import SubTitle from "./pages/components/SubTitle";
+import SuggestionForm from "./pages/components/SuggestionForm";
 import Title from "./pages/components/Title";
 import TitleBox from "./pages/components/TitleBox";
 import { SongsBox } from "./pages/styles";
-import SuggestionForm from "./pages/components/SuggestionForm";
-import HeaderTitle from "./pages/components/HeaderTitle";
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Head from "next/head";
 
 export default function Home() {
 
