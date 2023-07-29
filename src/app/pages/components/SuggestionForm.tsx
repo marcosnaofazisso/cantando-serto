@@ -33,32 +33,42 @@ export default function SuggestionForm() {
 
     const handleSubmit = (e: any) => {
         e.preventDefault()
-        const templateParams = {
-            from_name: nameRef.current?.value,
-            message: messageRef.current?.value,
-            song_name: suggestionNameRef.current?.value,
-            song_time: suggestionTime,
-            email: emailRef.current?.value,
-        }
 
-        toast.promise(
-            emailjs.send(
-                process.env.NEXT_PUBLIC_SERVICE_ID!,
-                process.env.NEXT_PUBLIC_TEMPLATE_ID!,
-                templateParams,
-                process.env.NEXT_PUBLIC_KEY
-            ),
-            {
-                pending: 'Enviando e-mail...',
-                success: 'E-mail enviado com sucesso!',
-                error: 'Ocorreu um erro ao enviar o e-mail.',
-            }).then((response: any) => {
-                console.log(response)
+        const messageValue = messageRef.current?.value
+        const emailValue = emailRef.current?.value
+        const suggestionNameValue = suggestionNameRef.current?.value
 
+        if (messageValue == "" || emailValue == "" || suggestionNameValue == "") {
+            toast.error("Preencha os campos obrigatórios!")
+        } else {
+
+            const templateParams = {
+                from_name: nameRef.current?.value,
+                message: messageValue,
+                song_name: suggestionNameValue,
+                song_time: suggestionTime,
+                email: emailValue,
             }
 
-            ).catch((error: any) =>
-                console.log(error))
+            toast.promise(
+                emailjs.send(
+                    process.env.NEXT_PUBLIC_SERVICE_ID!,
+                    process.env.NEXT_PUBLIC_TEMPLATE_ID!,
+                    templateParams,
+                    process.env.NEXT_PUBLIC_KEY
+                ),
+                {
+                    pending: 'Enviando e-mail...',
+                    success: 'E-mail enviado com sucesso!',
+                    error: 'Ocorreu um erro ao enviar o e-mail.',
+                }).then((response: any) => {
+                    console.log(response)
+
+                }
+
+                ).catch((error: any) =>
+                    console.log(error))
+        }
 
     }
 
@@ -78,7 +88,7 @@ export default function SuggestionForm() {
                     />
 
                     <TextField
-                        label="Digite seu email*"
+                        label="Digite seu email *"
                         id="outlined-basic"
                         className='formInput'
                         variant="outlined"
@@ -89,7 +99,7 @@ export default function SuggestionForm() {
                     />
 
                     <TextField
-                        label="Digite a mensagem da música*"
+                        label="Digite a mensagem da música *"
                         id="outlined-basic"
                         className='formInput'
                         variant="outlined"
@@ -100,7 +110,7 @@ export default function SuggestionForm() {
                     />
 
                     <TextField
-                        label="Digite o nome música sugerida*"
+                        label="Digite o nome música sugerida *"
                         id="outlined-basic"
                         className='formInput'
                         variant="outlined"
