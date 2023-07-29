@@ -2,13 +2,13 @@
 
 import emailjs from '@emailjs/browser';
 import { Button, TextField } from '@mui/material';
-import { useRef, useState } from 'react';
-import { StyledFormBox, inputLabelPropsStyles, inputPropsStyles } from '../styles';
+import { Dispatch, SetStateAction, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { StyledFormBox, inputLabelPropsStyles, inputPropsStyles } from '../styles';
 
 
-export default function SuggestionForm() {
+export default function SuggestionForm({ changePage }: { changePage: Dispatch<SetStateAction<number>>; }) {
 
     const [suggestionTime, setSuggestionTime] = useState<string>("00:00")
 
@@ -64,12 +64,16 @@ export default function SuggestionForm() {
                 }).then((response: any) => {
                     console.log(response)
 
-                }
+                }).catch((error: any) =>
+                    console.log(error)
 
-                ).catch((error: any) =>
-                    console.log(error))
+                ).finally(() => {
+                    changePage(0)
+
+                })
+
+
         }
-
     }
 
     return (

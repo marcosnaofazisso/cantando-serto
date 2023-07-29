@@ -20,7 +20,6 @@ import SuggestionForm from "./pages/components/SuggestionForm";
 import Title from "./pages/components/Title";
 import TitleBox from "./pages/components/TitleBox";
 import { SongsBox } from "./pages/styles";
-import Head from "next/head";
 
 export default function Home() {
 
@@ -90,7 +89,7 @@ export default function Home() {
           )}
           {pageSelected === 1 && (
             <>
-              <SuggestionForm />
+              <SuggestionForm changePage={setPageSelected}/>
             </>
           )}
         </Section>

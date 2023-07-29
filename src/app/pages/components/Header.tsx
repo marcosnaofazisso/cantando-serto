@@ -1,7 +1,7 @@
-import { PageInfos, pages } from '@/assets/navigation'
-import { Dispatch, SetStateAction, useState } from 'react'
-import { StyledHeader } from '../styles'
-import Option from './Option'
+import { PageInfos, pages } from '@/assets/navigation';
+import { Dispatch, SetStateAction, useState } from 'react';
+import { StyledHeader } from '../styles';
+import Option from './Option';
 
 export default function Header({ changePage }: { changePage: Dispatch<SetStateAction<number>>; }) {
 
