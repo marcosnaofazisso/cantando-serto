@@ -17,7 +17,7 @@ export const StyledTitleBox = styled.div`
     margin: 0;
 
     @media (max-width: 400px) {
-            margin: 2vh 0 5vh 0;
+            margin: 0 0 5vh 0;
         }
 
 `
@@ -31,10 +31,8 @@ export const StyledHeader = styled.div`
     align-items: center;
     flex-direction: row;
     background-color: ${LightTheme.first};
+    width: 100%;
     
-    @media (max-width: 3000px) {
-        width: 100%;
-        }
     @media (max-width: 800px) {
         width: 90vw;
         }

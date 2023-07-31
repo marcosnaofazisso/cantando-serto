@@ -2,13 +2,13 @@
 
 import emailjs from '@emailjs/browser';
 import { Button, TextField } from '@mui/material';
-import { Dispatch, SetStateAction, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { StyledFormBox, inputLabelPropsStyles, inputPropsStyles } from '../styles';
 
 
-export default function SuggestionForm({ changePage }: { changePage: Dispatch<SetStateAction<number>>; }) {
+export default function SuggestionForm() {
 
     const [suggestionTime, setSuggestionTime] = useState<string>("00:00")
 
@@ -58,17 +58,17 @@ export default function SuggestionForm({ changePage }: { changePage: Dispatch<Se
                     process.env.NEXT_PUBLIC_KEY
                 ),
                 {
-                    pending: 'Enviando e-mail...',
-                    success: 'E-mail enviado com sucesso!',
-                    error: 'Ocorreu um erro ao enviar o e-mail.',
+                    pending: 'Enviando sugestão...',
+                    success: 'Sugestão enviada com sucesso!',
+                    error: 'Ocorreu um erro ao enviar sugestão. Tente novamente mais tarde',
                 }).then((response: any) => {
                     console.log(response)
 
                 }).catch((error: any) =>
-                    console.log(error)
+                    console.error(error)
 
                 ).finally(() => {
-                    changePage(0)
+                    window.location.reload()
 
                 })
 
