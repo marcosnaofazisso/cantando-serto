@@ -17,8 +17,8 @@ export default function RootLayout({
     <html lang="pt-BR">
       <Head>
       </Head>
-      <Script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_GA_TRACKING_ID}`} />
-      <Script
+      <Script id="google-analytics" async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_GA_TRACKING_ID}`} />
+      <Script id="gtag-init"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];
