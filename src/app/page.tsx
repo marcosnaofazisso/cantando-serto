@@ -41,6 +41,7 @@ export default function Home() {
   return (
     <Root>
       <Main>
+
         <ToastContainer />
 
         <TitleBox>
@@ -89,7 +90,7 @@ export default function Home() {
           )}
           {pageSelected === 1 && (
             <>
-              <SuggestionForm changePage={setPageSelected}/>
+              <SuggestionForm />
             </>
           )}
         </Section>
