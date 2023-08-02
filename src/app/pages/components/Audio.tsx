@@ -1,7 +1,6 @@
 import { ForwardedRef, forwardRef } from 'react';
 import { StyledAudioBox } from '../styles';
 import { Song } from '../types/song.interface';
-
 interface AudioComponentProps {
     song: Song;
 }
@@ -9,8 +8,6 @@ interface AudioComponentProps {
 const AudioComponent = forwardRef<HTMLAudioElement, AudioComponentProps>((props: AudioComponentProps, ref: ForwardedRef<HTMLAudioElement>) => {
 
     const song = props.song
-
-
 
     return (
         <StyledAudioBox>
@@ -22,5 +19,4 @@ const AudioComponent = forwardRef<HTMLAudioElement, AudioComponentProps>((props:
 })
 
 AudioComponent.displayName = 'AudioComponent';
-
 export default AudioComponent;

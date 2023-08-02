@@ -46,12 +46,22 @@ import youreBeautiful from '../../public/resources/James_Blunt_-_Youre_Beautiful
 import ifIWereABoy from '../../public/resources/Beyonce_-_If _I_Were_A_Boy.mp3'
 import couldHaveBeenLove from '../../public/resources/Aerosmith_-_What_Could_Have_Been_Love.mp3'
 import feels from '../../public/resources/Calvin_Harris_-_Feels.mp3'
-
-
-
-
-
-
+import ooopsUp from '../../public/resources/SNAP_-_Ooops_Up.mp3'
+import rollin from '../../public/resources/Brave_Girls_-_Rollin.mp3'
+import oneCallAway from '../../public/resources/Charlie_Puth_-_One_Call_Away.mp3'
+import wontLetYouDown from '../../public/resources/PhD_-_I_Wont_Let_You_Down.mp3'
+import allByMyself from '../../public/resources/Celine_Dion_-_All_By_Myself.mp3'
+import breakFree from '../../public/resources/Queen_-_I_Want_To_Break_Free.mp3'
+import corona from '../../public/resources/Corona_-_The_Rhythm_of_the_Night.mp3'
+import canIHoldYou from '../../public/resources/Tracy_Chapman_-_Baby_Can_I_Hold_You.mp3'
+import abbaTheWinner from '../../public/resources/ABBA_-_The_Winner_Takes_ItAll.mp3'
+import whoCanItBe from '../../public/resources/Men_At_Work_-_Who_Can_It_Be Now.mp3'
+import billieJean from '../../public/resources/Michael_Jackson_-_Billie_Jean.mp3'
+import takeOnMe from '../../public/resources/aha_-_Take_On_Me.mp3'
+import neverGonnaGiveYouUp from '../../public/resources/Rick_Astley -_Never_Gonna_Give_You_Up.mp3'
+import noRoots from '../../public/resources/Alice_Merton_-_No_Roots.mp3'
+import boss from '../../public/resources/Lil_Pump_-_Boss.mp3'
+import withoutYou from '../../public/resources/Mariah_Carey_-_Without_You.mp3'
 // import name from '../../public/resources/'
 
 
@@ -363,7 +373,7 @@ export const songs: Song[] = [
         name: "You`re Beautiful",
         artist: "James Blunt",
         src: youreBeautiful,
-        trackMessage: "Mãe lava os pente, mãe lava os piolho, é só remédio... Os verme some... Demaia a minhoca no sabonete",
+        trackMessage: "Mãe lava os pente, mãe lava os piolho, é só remédio... Os verme some... Desmaia a minhoca no sabonete",
     },
     {
         id: 45,
@@ -386,25 +396,123 @@ export const songs: Song[] = [
         src: feels,
         trackMessage: "Não me ofende, o que eu te fiz??  Orangotango em três trios",
     },
+    {
+        id: 48,
+        name: "Ooops Up",
+        artist: "SNAP!",
+        src: ooopsUp,
+        trackMessage: "Seu c* só sai de ré, seu c* só sai de ré!",
+    },
+    {
+        id: 49,
+        name: "Rollin`",
+        artist: "Brave Girls",
+        src: rollin,
+        trackMessage: "11 semanas já fora de casa, lá em Singapura, eu só vim te coçar",
+    },
+    {
+        id: 50,
+        name: "One Call Away",
+        artist: "Charlie Puth",
+        src: oneCallAway,
+        trackMessage: "Chupa manga não",
+    },
+    {
+        id: 51,
+        name: "I Won`t Let You Down",
+        artist: "PhD",
+        src: wontLetYouDown,
+        trackMessage: "Aaaah um boleto não! Boleto não! Porqueee?",
+    },
+    {
+        id: 52,
+        name: "All By Myself",
+        artist: "Céline Dion",
+        src: allByMyself,
+        trackMessage: "O pai nasceu... no Morumbi",
+    },
+    {
+        id: 53,
+        name: "I Want to Break Free",
+        artist: "Queen",
+        src: breakFree,
+        trackMessage: "Anteontem fez frio!",
+    },
+    {
+        id: 54,
+        name: "The Rhythm of the Night",
+        artist: "Corona",
+        src: corona,
+        trackMessage: "Jesus humilha Sanatás! Oh nás, oh yeah",
+    },
+    {
+        id: 55,
+        name: "Baby Can I Hold You",
+        artist: "Tracy Chapman",
+        src: canIHoldYou,
+        trackMessage: "Baby que amarrou o fio de nylon",
+    },
+    {
+        id: 56,
+        name: "The Winner Takes It All",
+        artist: "ABBA",
+        src: abbaTheWinner,
+        trackMessage: "Na linha tem cerol! (tem cerol)",
+    },
+    {
+        id: 57,
+        name: "Who Can It Be Now",
+        artist: "Men At Work",
+        src: whoCanItBe,
+        trackMessage: "Nunca bebi não (2x)",
+    },
+    {
+        id: 58,
+        name: "Billie Jean",
+        artist: "Michael Jackson",
+        src: billieJean,
+        trackMessage: "Tu queres uma maçã? Hi hii",
+    },
+    {
+        id: 59,
+        name: "Take On Me",
+        artist: "A-ha",
+        src: takeOnMe,
+        trackMessage: "A-mi-ga eu não tenho tuuuu",
+    },
+    {
+        id: 60,
+        name: "Never Gonna Give You Up",
+        artist: "Rick Astley",
+        src: neverGonnaGiveYouUp,
+        trackMessage: "Leva agora o celular! Errei tio...",
+    },
+    {
+        id: 61,
+        name: "No Roots",
+        artist: "Alice Merton",
+        src: noRoots,
+        trackMessage: "Ah, caguei de novo... dei um peido",
+    },
+    {
+        id: 62,
+        name: "Boss",
+        artist: "Lil Pump",
+        src: boss,
+        trackMessage: "Já queimei muriçoca, já queimei muriçoca, yeah! ",
+    },
+    {
+        id: 63,
+        name: "Without You",
+        artist: "Mariah Carey",
+        src: withoutYou,
+        trackMessage: "Kelly... Me leve alí no Cláudio",
+    },
     // {
     //     id: 0,
     //     name: "",
     //     artist: "",
-    //     src: sugarBabyLove,
-    //     trackMessage: "",
-    // },
-    // {
-    //     id: 0,
-    //     name: "",
-    //     artist: "",
-    //     src: sugarBabyLove,
-    //     trackMessage: "",
-    // },
-    // {
-    //     id: 0,
-    //     name: "",
-    //     artist: "",
-    //     src: sugarBabyLove,
+    //     src: fileName,
     //     trackMessage: "",
     // },
 ]

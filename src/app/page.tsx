@@ -2,7 +2,7 @@
 
 import { songs } from "@/assets/songs";
 import SearchIcon from '@mui/icons-material/Search';
-import { InputAdornment, TextField } from "@mui/material";
+import { InputAdornment, TextField, Typography } from "@mui/material";
 import { RefObject, createRef, useState } from "react";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -38,6 +38,8 @@ export default function Home() {
     return songName.includes(filterValue) || artistName.includes(filterValue) || trackName.includes(filterValue);
   })
 
+  const lastUpdate = "02/08/2023"
+
   return (
     <Root>
       <Main>
@@ -70,6 +72,7 @@ export default function Home() {
                 }}
                 onChange={(e: any) => handleSearchSong(e)} />
 
+              <Typography style={{ color: "#F0EED7", fontWeight: 'bold', fontSize: '1.2rem' }}>Total: {filteredSongs.length} - Atualizado em: {lastUpdate}</Typography>
               <SongsBox>
                 {filteredSongs.map((song: any, index: number) => {
 
