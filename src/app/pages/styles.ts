@@ -11,6 +11,16 @@ export const LightTheme = {
     seventh: "#959696",
     eighth: "#c48038",
 }
+export const DarkTheme = {
+    first: "#FFA726",
+    second: "#2C2C2C",
+    forth: "#292929",
+    fifth: "#222222",
+    sixth: "#B0B0B0",
+    seventh: "#808080",
+    eighth: "#E65100",
+}
+
 export const StyledTitleBox = styled.div`
     display: flex;
     flex-direction: column;
@@ -146,6 +156,7 @@ export const StyledTitle = styled.div`
         }
     
     .mainTitle {
+        cursor: pointer;
         font-size: 10em;
         font-weight: 700;
         
@@ -173,6 +184,8 @@ export const StyledTitle = styled.div`
         color: ${LightTheme.fifth}
         
     }
+    
+
 `
 
 export const StyledSubTitle = styled.div`
@@ -182,19 +195,19 @@ export const StyledSubTitle = styled.div`
         
         @media (max-width: 3000px) {
             font-size: 2rem;
-            padding: 0 2vw 4vw 18vw;
+            padding: 0 2vw 0 18vw;
         }
         @media (max-width: 1200px) {
             font-size: 2.2rem;
-            padding: 0 2vw 8vw 22vw;
+            padding: 0 2vw 0 22vw;
         }
         @media (max-width: 800px) {
             font-size: 1.2rem;
-            padding: 0 2vw 5vw 22vw;
+            padding: 0 2vw 0 22vw;
         }
         @media (max-width: 400px) {
             font-size: .8rem;
-            padding: 0 1vw 1vw 12vw;
+            padding: 0 1vw 0 12vw;
         }
 
     }
@@ -202,6 +215,37 @@ export const StyledSubTitle = styled.div`
         display: inline;
         color: ${LightTheme.fifth};
         filter: drop-shadow(0 0 0.75rem black);
+    }
+
+    .mainCredits {
+        
+        @media (max-width: 3000px) {
+            font-size: 1.5rem;
+            padding: 0 2vw 4vw 18vw;
+        }
+        @media (max-width: 1200px) {
+            font-size: 1rem;
+            padding: 0 2vw 8vw 22vw;
+        }
+        @media (max-width: 800px) {
+            font-size: .8rem;
+            padding: 0 2vw 5vw 22vw;
+        }
+        @media (max-width: 400px) {
+            font-size: .5rem;
+            padding: 0 1vw 1vw 12vw;
+        }
+
+    }
+
+    .mainCreditsDetail {
+        display: inline;
+        text-decoration: underline;
+        color: ${LightTheme.second};
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 `
 

@@ -36,6 +36,16 @@ import crazy from '../../public/resources/Seal_-_Crazy.mp3'
 import getUpAndBoogie from '../../public/resources/Silver_Convention_-_Get_Up_and_Boogie.mp3'
 import linger from '../../public/resources/The_Cranberries_-_Linger.mp3'
 import sugarBabyLove from '../../public/resources/The_Rubettes_-_Sugar_Baby_Love.mp3'
+import betteDavisEyes from '../../public/resources/Kim_Carnes_-_Bette_Davis_Eyes.mp3'
+import sugaSuga from '../../public/resources/Oh_no_I_hope_I _dont_fall_-_Suga_ Suga.mp3'
+import blur from '../../public/resources/Blur_-_Song_2.mp3'
+import chrisBrownWithYou from '../../public/resources/Chris_Brown_-_With_You.mp3'
+import starboy from '../../public/resources/The_Weeknd_-_Starboy_feat_Daft_Punk.mp3'
+import weekndStarboy from '../../public/resources/Weeknd_Daft_Punk_-_Starboy.mp3'
+import youreBeautiful from '../../public/resources/James_Blunt_-_Youre_Beautiful.mp3'
+import ifIWereABoy from '../../public/resources/Beyonce_-_If _I_Were_A_Boy.mp3'
+import couldHaveBeenLove from '../../public/resources/Aerosmith_-_What_Could_Have_Been_Love.mp3'
+import feels from '../../public/resources/Calvin_Harris_-_Feels.mp3'
 
 
 
@@ -62,10 +72,10 @@ export const songs: Song[] = [
     },
     {
         id: 3,
-        name: "The Winner Takes it All",
-        artist: "ABBA",
-        src: abba,
-        trackMessage: "Vai lavar seu c*",
+        name: "New Rules",
+        artist: "Dua Lipa",
+        src: newRules,
+        trackMessage: "A falecida peida",
     },
     {
         id: 4,
@@ -83,39 +93,40 @@ export const songs: Song[] = [
     },
     {
         id: 6,
-        name: "Karma Chameleon",
-        artist: "Culture Club",
-        src: chamaleon,
-        trackMessage: "Calma calma calma Camilinha... que come angú, que come angú",
+        name: "The Evil that Men Do",
+        artist: "Iron Maiden",
+        src: evilThatMenDo,
+        trackMessage: "Tem lugar pra tu lá em Salvadoooor! Tem lugar pra tu lá em Salvador!",
     },
     {
         id: 7,
-        name: "Tears In Heaven",
-        artist: "Eric Clapton",
-        src: eric,
-        trackMessage: "Me passou óleo no rêgo...",
-    },
-    {
-        id: 8,
-        name: "Down Under",
-        artist: "Men at Work",
-        src: downUnder,
-        trackMessage: "Cavalinho na feira a comer",
-    },
-    {
-        id: 9,
-        name: "Dont Stop Till You Get Enough",
-        artist: "Michael Jackson",
-        src: dontStop,
-        trackMessage: "Que bom, olha a bosta... Tomate e guaraná (2x)",
-    },
-    {
-        id: 10,
         name: "Cry For Help",
         artist: "Rick Astley",
         src: cryForHelp,
         trackMessage: "Quando eu nasci meu pai correu, quando eu nasci meu pai correu",
     },
+    {
+        id: 8,
+        name: "Aline",
+        artist: "Christophe",
+        src: aline,
+        trackMessage: "Eu já criei, criei, galinha",
+    },
+    {
+        id: 9,
+        name: "Looking at My Girl",
+        artist: "Double You",
+        src: doubleYou,
+        trackMessage: "Gisele é a minha avó, Gisele é a minha avó",
+    },
+    {
+        id: 10,
+        name: "True Colors",
+        artist: "Cindy Lauper",
+        src: trueColors,
+        trackMessage: "Parecia o tio Carlos jogando truco",
+    },
+
     {
         id: 11,
         name: "It Must Have Been Love",
@@ -139,10 +150,10 @@ export const songs: Song[] = [
     },
     {
         id: 14,
-        name: "Aline",
-        artist: "Christophe",
-        src: aline,
-        trackMessage: "Eu já criei, criei, galinha",
+        name: "Down Under",
+        artist: "Men at Work",
+        src: downUnder,
+        trackMessage: "Cavalinho na feira a comer",
     },
     {
         id: 15,
@@ -160,10 +171,10 @@ export const songs: Song[] = [
     },
     {
         id: 17,
-        name: "Looking at My Girl",
-        artist: "Double You",
-        src: doubleYou,
-        trackMessage: "Gisele é a minha avó, Gisele é a minha avó",
+        name: "Dont Stop Till You Get Enough",
+        artist: "Michael Jackson",
+        src: dontStop,
+        trackMessage: "Que bom, olha a bosta... Tomate e guaraná (2x)",
     },
     {
         id: 18,
@@ -195,10 +206,10 @@ export const songs: Song[] = [
     },
     {
         id: 22,
-        name: "True Colors",
-        artist: "Cindy Lauper",
-        src: trueColors,
-        trackMessage: "Parecia o tio Carlos jogando truco",
+        name: "Tears In Heaven",
+        artist: "Eric Clapton",
+        src: eric,
+        trackMessage: "Me passou óleo no rêgo...",
     },
     {
         id: 23,
@@ -216,17 +227,17 @@ export const songs: Song[] = [
     },
     {
         id: 25,
-        name: "New Rules",
-        artist: "Dua Lipa",
-        src: newRules,
-        trackMessage: "A falecida peida",
+        name: "The Winner Takes it All",
+        artist: "ABBA",
+        src: abba,
+        trackMessage: "Vai lavar seu c*",
     },
     {
         id: 26,
-        name: "The Evil that Men Do",
-        artist: "Iron Maiden",
-        src: evilThatMenDo,
-        trackMessage: "Tem lugar pra tu lá em Salvadoooor! Tem lugar pra tu lá em Salvador!",
+        name: "Karma Chameleon",
+        artist: "Culture Club",
+        src: chamaleon,
+        trackMessage: "Calma calma calma Camilinha... que come angú, que come angú",
     },
     {
         id: 27,
@@ -305,4 +316,95 @@ export const songs: Song[] = [
         src: sugarBabyLove,
         trackMessage: "Enxuga beeem bilau, enxuga beem bilaaaau, Ademir!",
     },
+    {
+        id: 38,
+        name: "Bette Davis Eyes",
+        artist: "Kim Carnes",
+        src: betteDavisEyes,
+        trackMessage: "Que que é isso? Chico Anysio?",
+    },
+    {
+        id: 39,
+        name: "Oh No I Hope I Don`t Fall",
+        artist: "Suga Suga",
+        src: sugaSuga,
+        trackMessage: "Oh no! AS ROUPA NO SOL!",
+    },
+    {
+        id: 40,
+        name: "Song 2",
+        artist: "Blur",
+        src: blur,
+        trackMessage: "Minha lambida é bem melhor uhuuuu! Era pizza, era melhor uhuuu!",
+    },
+    {
+        id: 41,
+        name: "With You",
+        artist: "Chris Brown",
+        src: chrisBrownWithYou,
+        trackMessage: "É um ninho de burro... Acariciei um burro",
+    },
+    {
+        id: 42,
+        name: "Starboy",
+        artist: "The Weeknd feat Daft Punk",
+        src: starboy,
+        trackMessage: "Sujamo a sala, tu quer que limpa? Sujamo a copa que não limpei",
+    },
+    {
+        id: 43,
+        name: "Starboy",
+        artist: "The Weeknd feat Daft Punk",
+        src: weekndStarboy,
+        trackMessage: "Nem vou te dar! Ah ah ah ah ah ah, a mamada do Gustavo",
+    },
+    {
+        id: 44,
+        name: "You`re Beautiful",
+        artist: "James Blunt",
+        src: youreBeautiful,
+        trackMessage: "Mãe lava os pente, mãe lava os piolho, é só remédio... Os verme some... Demaia a minhoca no sabonete",
+    },
+    {
+        id: 45,
+        name: "If I Were a Boy",
+        artist: "Beyoncé",
+        src: ifIWereABoy,
+        trackMessage: "Rivaldo é um boi, tem dentadura nos dente!",
+    },
+    {
+        id: 46,
+        name: "What Could Have Been Love",
+        artist: "Aerosmith",
+        src: couldHaveBeenLove,
+        trackMessage: "O C* DELE BRILHOU!",
+    },
+    {
+        id: 47,
+        name: "Feels",
+        artist: "Calvin Harris",
+        src: feels,
+        trackMessage: "Não me ofende, o que eu te fiz??  Orangotango em três trios",
+    },
+    // {
+    //     id: 0,
+    //     name: "",
+    //     artist: "",
+    //     src: sugarBabyLove,
+    //     trackMessage: "",
+    // },
+    // {
+    //     id: 0,
+    //     name: "",
+    //     artist: "",
+    //     src: sugarBabyLove,
+    //     trackMessage: "",
+    // },
+    // {
+    //     id: 0,
+    //     name: "",
+    //     artist: "",
+    //     src: sugarBabyLove,
+    //     trackMessage: "",
+    // },
 ]

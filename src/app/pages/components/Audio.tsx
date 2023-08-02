@@ -10,9 +10,11 @@ const AudioComponent = forwardRef<HTMLAudioElement, AudioComponentProps>((props:
 
     const song = props.song
 
+
+
     return (
         <StyledAudioBox>
-            <audio controls className='audioControl' ref={ref}>
+            <audio controls className='audioControl' ref={ref} >
                 <source src={song.src} type="audio/mpeg" />
             </audio>
         </StyledAudioBox>
