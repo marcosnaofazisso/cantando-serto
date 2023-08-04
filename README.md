@@ -1,34 +1,23 @@
-# Project Name
+# Cantando Serto
+Te ensinando a cantar com elegânssia
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text eve
+![cantando-serto](https://github.com/marcosnaofazisso/cantando-serto/assets/79977399/04d26c74-d418-4f37-a7c5-c0686422078c)
+
+# Link
+https://www.cantando-serto.com.br/
 
 ### Developers: 
 * [Marcos Vinicius Ferreira](https://github.com/marcosnaofazisso) 
 
 ## Goals and Rules:
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Cantando Serto is an entertainment and humor website, based on classic and international songs being sung incorrectly by Brazilians. 
 
 # Demo
-<img src="./demo/boromir.jpg" height="200" width="400">
+https://github.com/marcosnaofazisso/cantando-serto/assets/79977399/a40a4b2a-710c-4f37-b13b-56fea4106729
 
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+# Development
+Entertainment responsive website developed using NextJS with TypeScript, Toastify, EmailJS and integration with Google Analytics and deployed by Vercel.
 
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-# Tutorial
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-
-Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-    code 
-    code  
-    code
 
 
 ## Thank you!
